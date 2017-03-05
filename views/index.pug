@@ -1,0 +1,54 @@
+extends layout
+block singlePageCSS
+  link(rel='stylesheet', href='/stylesheets/home.css')
+block content
+  section.services
+    h2.heading Услуги
+    .services-container
+      article
+        img(src="/images/service1.png")
+        a Бетон
+      article
+        img(src="/images/service2.png")
+        a Нерудные материалы
+      article
+        img(src="/images/service3.png")
+        a ЖБИ
+  section.parallax-info
+    h2.heading МАРКА PAUL MITCHELL СЕГОДНЯ
+    div
+      p Это более 150 наименований продуктов для ухода за волосами, окрашивания, завивки, ламинирования.
+      p Продукция продается более чем в 100.000 салонах США
+      p и более чем в 80 странах по всему миру
+  section.events
+    h2.heading СОБЫТИЯ
+    .events-container
+      article.event
+        h3 Paul Mitchell
+        p.date 11.11.2016
+        p.text Появившись 30 лет назад в Америке, она прошла путь от малоизвестного бренда «для своих» до международного гиганта
+      article.event
+        h3 Paul Mitchell
+        p.date 11.11.2016
+        p.text Появившись 30 лет назад в Америке, она прошла путь от малоизвестного бренда «для своих» до международного гиганта
+      article.event
+        h3 Paul Mitchell
+        p.date 11.11.2016
+        p.text Появившись 30 лет назад в Америке, она прошла путь от малоизвестного бренда «для своих» до международного гиганта
+  .photos
+  .director
+    .photo
+      img(src="/images/petuh.png")
+    p Арт-директор салона - Рыков Сергей,
+    p уже более 10 лет работает с брендом Paul Mitchell
+  .map
+    script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=0qH3KGA5gbR_DOdIlL8fekIDcdh4Ha9C&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true")
+  script.
+
+      $(document).ready(function () {
+
+          $('.parallax-info').parallax({imageSrc: '/images/1.png'});
+          $('.director').parallax({imageSrc: '../images/2.png'});
+
+      })
+

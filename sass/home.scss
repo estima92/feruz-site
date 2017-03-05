@@ -1,0 +1,162 @@
+@mixin headingWithStripes() {
+  position: relative;
+  font-size: 49px;
+  line-height: 55px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 35px;
+  font-weight: 300;
+  &:before {
+    position: absolute;
+    top: 23px;
+    content: "";
+    left: 50%;
+    margin-left: -318px;
+    height: 7px;
+    border-top: 1px solid #bcbcbc;
+    border-bottom: 1px solid #bcbcbc;
+    width: 160px;
+  }
+  &:after {
+    position: absolute;
+    top: 23px;
+    content: "";
+    right: 50%;
+    margin-right: -318px;
+    height: 7px;
+    border-top: 1px solid #bcbcbc;
+    border-bottom: 1px solid #bcbcbc;
+    width: 160px;
+  }
+}
+.services {
+  .heading {
+    @include headingWithStripes();
+  }
+  .services-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row;
+    justify-content: center;
+    padding-bottom: 66px;
+    article {
+      width: 370px;
+      display: inline-block;
+      margin-left: 30px;
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}
+.parallax-info {
+  box-sizing: border-box;
+  padding-top: 81px;
+  padding-bottom: 40px;
+  //background: black url('/images/parallax_fon.png') no-repeat center top / cover;
+  min-height: 630px;
+  .heading {
+    font-size: 75px;
+    line-height: 88px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  div {
+    padding-top: 15px;
+    p {
+      text-align: center;
+      font-size: 36px;
+      line-height: 48px;
+      color: #ffffff;
+      font-style: italic;
+    }
+  }
+}
+.events {
+  .heading {
+    @include headingWithStripes();
+  }
+  .events-container {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row;
+    justify-content: center;
+    padding-bottom: 66px;
+    .event {
+      width: 370px;
+      display: inline-block;
+      margin-left: 30px;
+      &:first-of-type {
+        margin-left: 0;
+      }
+      h3 {
+        font-size: 30px;
+        color: #EA3838;
+      }
+      .date {
+        font-size: 30px;
+        color: #EA3838;
+      }
+      .text {
+        font-size: 16px;
+      }
+    }
+  }
+
+}
+.director {
+  //background: black url('/images/petuh_fon.png') no-repeat center top / cover;
+  padding-top: 81px;
+  padding-bottom: 40px;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  .photo {
+    height: 302px;
+    width: 302px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 7px solid white;
+    }
+    &:before{
+      position: absolute;
+      top: 158px;
+      content: "";
+      left: 50%;
+      margin-left: -310px;
+      border-bottom: 1px solid #ffffff;
+      width: 159px;
+    }
+    &:after {
+      position: absolute;
+      top: 158px;
+      right: 50%;
+      margin-right: -324px;
+      content: "";
+      border-bottom: 1px solid #ffffff;
+      width: 159px;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 36px;
+    line-height: 48px;
+    color: #ffffff;
+    font-style: italic;
+  }
+}
+.map {
+  height: 450px;
+  background: darkslategray;
+}
