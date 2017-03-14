@@ -1,11 +1,13 @@
 header {
-  background: black url('/images/header_fon.png') no-repeat center top / cover;
+  background: black url('/images/logo_new2.png') no-repeat;
+  background-position: 50% 48%;
+  background-size: 100% 150%;
   display: flex;
   display: -webkit-flex;
   flex-flow: column;
   align-items: center;
   justify-content: flex-start;
-  height: 330px;
+  height: 400px;
 }
 
 .adress {
@@ -18,7 +20,10 @@ header {
 }
 
 nav {
-  height: 88px;
+  height: 50px;
+  padding: 0px 20px;
+  z-index: 99999;
+  padding-top: 30px;
   ul {
     display: inline-block;
     list-style: none;
@@ -33,7 +38,7 @@ nav {
         text-decoration: none;
         text-transform: uppercase;
         font-size: 19px;
-        line-height: 88px;
+        //line-height: 88px;
         -webkit-transition: 0.3s all ease;
         transition: 0.3s all ease;
         &:hover,&:focus,&:active {

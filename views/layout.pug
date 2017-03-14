@@ -13,3 +13,34 @@ html
     include elements/header
     block content
     include elements/footer
+    style.
+      .navbar-fixed {
+        position: fixed;
+        top: -88px;
+        background: rgba(0, 0, 0, 0.9);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    script.
+        (function ($) {
+            "use strict";
+
+            var $navbar = $("#navbar"),
+                y_pos = $navbar.offset().top,
+                height = $navbar.height();
+
+            $(document).scroll(function () {
+                var scrollTop = $(this).scrollTop();
+
+                if (scrollTop > y_pos + height) {
+                    $navbar.addClass("navbar-fixed").animate({
+                        top: 0
+                    });
+                } else if (scrollTop <= y_pos) {
+                    $navbar.removeClass("navbar-fixed").clearQueue().animate({
+                        top: "-48px"
+                    }, 0);
+                }
+            });
+
+        })(jQuery, undefined);
